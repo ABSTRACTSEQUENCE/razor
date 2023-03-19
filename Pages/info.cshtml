@@ -1,0 +1,20 @@
+﻿@page
+@model razor.Pages.IndexModel
+@{
+    razor.Pages.User u = Model.user;
+}
+<h2>Информация:</h2>
+<div>
+    <p>Имя: @u.name</p>
+    <p>Возраст: @u.age</p>
+    <p>Почта: @u.email</p>
+    <p>
+        Список технологий:
+        <ul>
+            @foreach (string s in u.technologies)
+            {
+                <li>@s</li>
+            }
+        </ul>
+    </p>
+</div>

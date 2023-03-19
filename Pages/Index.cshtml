@@ -1,0 +1,12 @@
+﻿@page
+@model razor.Pages.IndexModel
+@{
+    razor.Pages.User u = Model.user;
+}
+<h2>Введите данные</h2>
+<form method="post">
+    <p>Имя:<input type="text"/></p>
+    <p>Почта:<input type="text"/></p>
+    <p>Пул технологий(через запятую): <input type="text"/></p>
+    <input type="submit" />
+</form>
