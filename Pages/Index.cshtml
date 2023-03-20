@@ -5,8 +5,10 @@
 }
 <h2>Введите данные</h2>
 <form method="post">
-    <p>Имя:<input type="text"/></p>
-    <p>Почта:<input type="text"/></p>
-    <p>Пул технологий(через запятую): <input type="text"/></p>
+    <p>Имя:<input type="text" name="name"/></p>
+    <p>Почта:<input type="email" name="email"/></p>
+    <p>Пул технологий(через запятую): <input type="text" name="technologies"/></p>
     <input type="submit" />
 </form>
+<h3>@Model.error</h3>
+ 

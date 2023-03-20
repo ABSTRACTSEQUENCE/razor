@@ -1,7 +1,9 @@
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Razor;
 using razor;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddRazorPages();
+builder.Services.AddMvc().AddRazorPagesOptions(o=>o.Conventions.ConfigureFilter(new IgnoreAntiforgeryTokenAttribute()));
 var app = builder.Build();
 app.MapRazorPages();
 app.UseDeveloperExceptionPage();
