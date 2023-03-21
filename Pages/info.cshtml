@@ -1,4 +1,11 @@
 ﻿@page
 @model razor.Pages.InfoModel
-@{
-}
+    <p>Имя: @Model.u.name</p>
+    <p>Почта: @Model.u.email</p>
+    <p>Пул технолоигй: </p>
+    <ul>
+       @foreach (var i in Model.u.technologies){<li>@i</li>}
+    </ul>
+    <p>Информация: @Model.u.about</p>
+    <p>Возраст: @Model.u.age</p>
+        
